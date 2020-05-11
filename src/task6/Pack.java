@@ -31,7 +31,7 @@ public class Pack {
     public void checkSet (List<Item> items) {
         if (bestList.isEmpty()) {
             if (calcWeight(items) <= maxWeight) {
-                bestList = items;
+                bestList.addAll(items);
                 maxCost = calcCost(items);
             }
         } else {
